@@ -197,9 +197,16 @@ public class Main {
 //        String s = "abcde".replaceAll("de", "ed");
 //        System.out.println(s);
 
-        Average avr = new Average(2,3,4);
-        System.out.println(avr.average());
+//        Average avr = new Average(2,3,4);
+//        System.out.println(avr.average());
 
+        Scanner sc = new Scanner(System.in);
+        double nr1 = sc.nextDouble();
+        double nr2 = sc.nextDouble();
+        Complex cp = new Complex();
+        cp.sum(nr1,nr2);
+        cp.difference(nr1,nr2);
+        cp.prod(nr1,nr2);
 
 
 
