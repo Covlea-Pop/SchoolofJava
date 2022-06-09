@@ -1,3 +1,10 @@
+package org.example;
+
+import org.example.Average;
+import org.w3c.dom.ls.LSOutput;
+
+import javax.sound.midi.Soundbank;
+import java.net.SocketTimeoutException;
 import java.util.Scanner;
 
 public class Main {
@@ -190,9 +197,14 @@ public class Main {
 //        String s = "abcde".replaceAll("de", "ed");
 //        System.out.println(s);
 
+        Average avr = new Average(2,3,4);
+        System.out.println(avr.average());
+
+
 
 
     }
+
 }
 
 
