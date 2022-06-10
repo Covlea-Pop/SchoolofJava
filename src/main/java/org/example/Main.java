@@ -7,8 +7,8 @@ import javax.sound.midi.Soundbank;
 import java.net.SocketTimeoutException;
 import java.util.Scanner;
 
-public class Main {
-    public static void main(String[] args) {
+//public class Main {
+//    public static void main(String[] args) {
 //        System.out.println("Hello");
 //
 //        //afisari pe aceeasi linie
@@ -200,19 +200,72 @@ public class Main {
 //        Average avr = new Average(2,3,4);
 //        System.out.println(avr.average());
 
-        Scanner sc = new Scanner(System.in);
-        double nr1 = sc.nextDouble();
-        double nr2 = sc.nextDouble();
-        Complex cp = new Complex();
-        cp.sum(nr1,nr2);
-        cp.difference(nr1,nr2);
-        cp.prod(nr1,nr2);
+//        Scanner sc = new Scanner(System.in);
+//        double nr1 = sc.nextDouble();
+//        double nr2 = sc.nextDouble();
+//        Complex cp = new Complex();
+//        cp.sum(nr1,nr2);
+//        cp.difference(nr1,nr2);
+//        cp.prod(nr1,nr2);
 
 
+//
+//    }
+//
+//}
+public class Main {
+    public static void main(String[] args) {
+//
+//        Persoana pers1 = new Persoana();
+//        System.out.println(pers1.nume + " " + pers1.varsta);
+//        pers1.cresteVarsta();
+//        System.out.println(pers1.varsta);
+//
+//        Persoana pers2 = new Persoana("Marius", 20);
+//        System.out.println(pers2.nume + " " + pers2.varsta);
+//        pers2.cresteVarsta();
+//        System.out.println(pers2.varsta);
+//
+//        Masina mercedes = new Masina();
+//        mercedes.seteazaCapacitateMotor(2.4);
+//        System.out.println(mercedes.capacitateMotor + " " + mercedes.marca);
+//
+//        Masina bmw = new Masina("BMW", "rosu");
+//        bmw.seteazaCapacitateMotor(3.0);
+//        System.out.println(bmw.marca + " " + bmw.capacitateMotor);
+//
+//        Masina audi = new Masina("Audi");
+        /*Average avr = new Average();
+        System.out.println(avr.average());
+        double variablila = avr.average();
+        System.out.println(variablila);*/
+//        Scanner sc = new Scanner(System.in);
+//        double n1 = sc.nextDouble();
+//        double n2 = sc.nextDouble();
+//        Complex cp = new Complex();
+//        cp.sum(n1,n2);
+//        cp.difference(n1,n2);
+//        cp.prod(n1,n2);
 
+//
+//        Mobila dulap = new Mobila();
+//        System.out.println(dulap.inaltime + " " + dulap.lungime);
+//        dulap.inaltime = 12;
+//        dulap.lungime = 21;
+//        System.out.println(dulap.inaltime + " " + dulap.lungime);
+//        dulap.setareLungime();
+//        System.out.println(dulap.lungime);
     }
-
 }
+
+//    modificatori de access
+
+//    default - accesibil in acelasi pachet
+//    private - accesibile in aceeasi clasa
+//    protected - in acelasi pachet sau subclase in pachete diferite
+//    public - cel mai permisiv dintre toate, poti accesa o clasa publica de oriunde
+
+
 
 
 
