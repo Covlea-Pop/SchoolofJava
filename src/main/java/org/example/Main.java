@@ -5,7 +5,10 @@ import org.w3c.dom.ls.LSOutput;
 
 import javax.sound.midi.Soundbank;
 import java.net.SocketTimeoutException;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
+import java.util.InputMismatchException;
 
 //public class Main {
 //    public static void main(String[] args) {
@@ -255,6 +258,29 @@ public class Main {
 //        System.out.println(dulap.inaltime + " " + dulap.lungime);
 //        dulap.setareLungime();
 //        System.out.println(dulap.lungime);
+
+
+
+        Scanner sc = new Scanner(System.in);
+        int nrDeContacte = sc.nextInt();
+        Map<String, Integer> agenda = new HashMap<>();
+        for (int i = 0; i < nrDeContacte; ++i) {
+            String nume = sc.nextLine() + sc.nextLine();
+
+            int tel = sc.nextInt();
+            agenda.put(nume, tel);
+            System.out.println(agenda);
+        }
+        int queries = sc.nextInt();
+        for (int i = 0; i < queries; ++i) {
+            String verificaContact = sc.next();
+            if (agenda.containsKey(verificaContact)) {
+                System.out.println(verificaContact
+                        + "=" + agenda.get(verificaContact));
+            } else {
+                System.out.println("Not found");
+            }
+        }
     }
 }
 
