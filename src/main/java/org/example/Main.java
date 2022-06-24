@@ -1,14 +1,9 @@
 package org.example;
 
-import org.example.Average;
-import org.w3c.dom.ls.LSOutput;
-
-import javax.sound.midi.Soundbank;
-import java.net.SocketTimeoutException;
+import java.io.*;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
-import java.util.InputMismatchException;
 
 //public class Main {
 //    public static void main(String[] args) {
@@ -217,7 +212,8 @@ import java.util.InputMismatchException;
 //
 //}
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+
 //
 //        Persoana pers1 = new Persoana();
 //        System.out.println(pers1.nume + " " + pers1.varsta);
@@ -259,25 +255,24 @@ public class Main {
 //        dulap.setareLungime();
 //        System.out.println(dulap.lungime);
 
-
-
-        Scanner sc = new Scanner(System.in);
-        int nrDeContacte = sc.nextInt();
+       BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         Map<String, Integer> agenda = new HashMap<>();
-        for (int i = 0; i < nrDeContacte; ++i) {
-            String nume = sc.nextLine() + sc.nextLine();
+        int nrContacte = Integer.parseInt(br.readLine());
+        for (int i = 0; i < nrContacte; ++i) {
+            String nume = br.readLine();
 
-            int tel = sc.nextInt();
-            agenda.put(nume, tel);
+            int tel = Integer.parseInt(br.readLine());
+            agenda.put(nume,tel);
             System.out.println(agenda);
         }
-        int queries = sc.nextInt();
-        for (int i = 0; i < queries; ++i) {
-            String verificaContact = sc.next();
-            if (agenda.containsKey(verificaContact)) {
-                System.out.println(verificaContact
-                        + "=" + agenda.get(verificaContact));
-            } else {
+            int queries = Integer.parseInt(br.readLine());
+            for (int i = 0; i < queries; ++i) {
+            String Contact = br.readLine();
+            if (agenda.containsKey(Contact)) {
+               System.out.println(Contact
+                        + "=" + agenda.get(Contact));
+
+           } else {
                 System.out.println("Not found");
             }
         }
